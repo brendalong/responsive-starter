@@ -3,7 +3,7 @@ Web pages are viewed in response to the size of the browser (computer, tablet, p
 
 ##Bootstrap
 http://getbootstrap.com/  
-Examples: http://getbootstrap.com/getting-started/#examples
+Examples: http://getbootstrap.com/getting-started/#examples  
 [Grid Demo](bootstrap-grid.html)
 
 ##Flexbox
