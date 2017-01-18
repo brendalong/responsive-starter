@@ -1,0 +1,23 @@
+body {
+	padding: 0 1em;
+}
+.container {
+	padding: 0 1em;
+}
+
+h4 {
+	margin-top: 1.5em;
+}
+.row {
+	margin-bottom: 1.5em;
+}
+.row .row {
+	margin-top: 0.8em;
+	margin-bottom: 0;
+}
+/* [attribute*=value] --- Selects every class item whose value contains the substring "col-" */
+[class*="col-"] { 
+	padding: 1em 0;
+	background-color: rgba(255,195,13,.3);
+	border: 1px solid rgba(255,195,13,.4);
+}
