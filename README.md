@@ -5,6 +5,7 @@ Web pages are viewed in response to the size of the browser (computer, tablet, p
 http://getbootstrap.com/  
 Examples: http://getbootstrap.com/getting-started/#examples  
 [Grid Demo](bootstrap-grid.html)
+[Getting Started Example](https://github.com/brendalong/JumpStart-bootstrap)
 
 ## Flexbox
 Layout mode in CSS3  
