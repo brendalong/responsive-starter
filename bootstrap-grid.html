@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Example of the Bootstrap Grid in Action">
+    <meta name="author" content="Brenda Long">
 
-    <title>Grid Template for Bootstrap</title>
+    <title>Grid Template for Bootstrap 4</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <!-- CSS for page layout -->
     <link href="css/mystyle.css" rel="stylesheet">
 
@@ -17,48 +17,69 @@
 
 <body>
   <div class="container">
-    <h1>Bootstrap Grid Example</h1>
-      <p><a href="http://getbootstrap.com/css/#responsive-utilities" target="_blank">Bootstrap's visibility classes</a>. Examine the following grids in a browser. This first grid is using all 4 grid sizes combined in a single row.</p> 
-      <p class="visible-lg"><strong>lg</strong> indicates that the large grid displaying. The grid stacks horizontally &lt; 1200px. </p>
-      <p class="visible-md"><strong>md</strong> indicates that the medium grid displaying. The grid stacks horizontally &lt; 992px. </p>
-      <p class="visible-sm"><strong>sm</strong> indicates that the small grid displaying. The grid stacks horizontally &lt; 768px. </p>
-      <p class="visible-xs"><strong>xs</strong> indicates that the extra small grid displaying. This grid is always horizontal. </p>
+    <h1>Bootstrap 4: Grid Example</h1>
+
+    <!-- .hidden-sm-down.hidden-xl-up  shows the element only on medium and large devices). -->
+
+
+      <p><a href="http://getbootstrap.com/docs/4.0/utilities/display/" target="_blank">Bootstrap's visible and hide classes</a>. Examine the following grids in a browser. This first grid is using all grid sizes combined in a single row. Start by adding the d-none class. Work up from the smallest to display content at different sizes.</p> 
+      <p class="d-none d-xl-block"><strong>xl</strong> indicates that the x-large grid is displaying. The grid stacks horizontally &lt; 1200px. </p>
+      <p class="d-none d-lg-block d-xl-none"><strong>lg</strong> indicates that the large grid is displaying. The grid stacks horizontally &lt; 992px. </p>
+      <p class="d-none d-md-block d-lg-none"><strong>md</strong> indicates that the medium grid is displaying. The grid stacks horizontally &lt; 768px. </p>
+      <p class="d-none d-sm-block d-md-none"><strong>sm</strong> indicates that the small grid is displaying. The grid stacks horizontally &lt; 575px. </p>
+      <p class="d-block d-sm-none"><strong>xs</strong> indicates that the extra small grid is displaying. This grid stays horizontal.</p>
 
       <div class="row">
-        <div class="col-lg-4 col-md-1 col-sm-5 col-xs-5">
-        	<span class="visible-lg">.col-lg-4</span>
-          <span class="visible-md">.col-md-1</span>
-          <span class="visible-sm">.col-sm-5</span>
-          <span class="visible-xs">.col-xs-5</span>
+        <div class="col-lg-4 col-md-1 col-sm-5 col-5">
+        	<span class="d-none d-xl-block">.col-xl-4</span>
+          <span class="d-none d-lg-block d-xl-none">.col-lg-6</span>
+          <span class="d-none d-md-block d-lg-none">.col-md-1</span>
+          <span class="d-none d-sm-block d-md-none">.col-sm-5</span>
+          <span class="d-block d-sm-none">.col-5</span>
         </div>
-        <div class="col-lg-4 col-md-5 col-sm-1 col-xs-6">
-        	<span class="visible-lg">.col-lg-4</span>
-          <span class="visible-md">.col-md-5</span>
-          <span class="visible-sm">.col-sm-1</span>
-          <span class="visible-xs">.col-xs-6</span>
+        <div class="col-lg-4 col-md-5 col-sm-1 col-6">
+        	<span class="d-none d-xl-block">.col-xl-4</span>
+          <span class="d-none d-lg-block d-xl-none">.col-lg-3</span>
+          <span class="d-none d-md-block d-lg-none">.col-md-5</span>
+          <span class="d-none d-sm-block d-md-none">.col-sm-1</span>
+          <span class="d-block d-sm-none">.col-6</span>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-1">
-        	<span class="visible-lg">.col-lg-4</span>
-          <span class="visible-md">.col-md-6</span>
-          <span class="visible-sm">.col-sm-6</span>
-          <span class="visible-xs">.col-xs-1</span>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-1">
+        	<span class="d-none d-xl-block">.col-xl-4</span>
+          <span class="d-none d-lg-block d-xl-none">.col-lg-3</span>
+          <span class="d-none d-md-block d-lg-none">.col-md-6</span>
+          <span class="d-none d-sm-block d-md-none">.col-sm-6</span>
+          <span class="d-block d-sm-none">.col-1</span>
        </div>
       </div> <!-- end row -->
       
-      <h2>xs Grid Alone</h2>
+      <h2>Unit-less value for col <small class="text-muted">enter one value and let the magic happen</small></h2>
         <div class="row">
-            <div class="col-xs-5">
-                <p>.col-xs-5</p>
+            <div class="col">
+                <p>.col</p>
             </div>
-            <div class="col-xs-6">
-            	<p>.col-xs-6</p>
+            <div class="col">
+              <p>.col</p>
             </div>
-            <div class="col-xs-1">
-                <p>.col-xs-1</p>
+            <div class="col-2">
+                <p>.col-2</p>
+           </div>
+        </div> <!-- end row -->
+
+      <h2>xs Grid Alone <small class="text-muted d-xs-none">never stacks, always stays horizontal</small></h2>
+        <div class="row">
+          <div class="col-5">
+                <p>.col-5</p>
+            </div>
+            <div class="col-6">
+              <p>.col-6</p>
+            </div>
+            <div class="col-1">
+                <p>.col-1</p>
            </div>
       	</div> <!-- end row -->
-      
-        <h2>sm Grid Alone</h2>
+        
+        <h2>sm Grid Alone <small class="text-muted d-sm-none">stacks at &lt; 575px</small></h2>
         <div class="row">
             <div class="col-sm-5">
                 <p>.col-sm-5</p>
@@ -70,8 +91,8 @@
                 <p>.col-sm-6</p>
            </div>
       	</div> <!-- end row -->
-        
-        <h2>md Grid Alone</h2>
+
+        <h2>md Grid Alone <small class="text-muted d-md-none">stacks at &lt; 768px</small></h2>
         <div class="row">
             <div class="col-md-1">
                 <p>.col-md-1</p>
@@ -84,7 +105,7 @@
            </div>
       	</div> <!-- end row -->
         
-        <h2>lg Grid Alone</h2>
+        <h2>lg Grid Alone <small class="text-muted d-lg-none">stacks at &lt; 992px</small></h2>
         <div class="row">
             <div class="col-lg-4">
                 <p>.col-lg-4</p>
@@ -96,8 +117,21 @@
                 <p>.col-lg-4</p>
            </div>
       	</div> <!-- end row -->
-      
-      
+
+
+        <h2>xl Grid Alone <small class="text-muted d-xl-none">stacks at &lt; 1200px</small></h2>
+        <div class="row">
+            <div class="col-xl-2">
+                <p>.col-xl-4</p>
+            </div>
+            <div class="col-xl-4">
+              <p>.col-xl-4</p>
+            </div>
+            <div class="col-xl-6">
+                <p>.col-xl-4</p>
+           </div>
+        </div> <!-- end row -->
+
 	</div> <!-- /container -->
   </body>
 </html>
